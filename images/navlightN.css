@@ -1,0 +1,29 @@
+/* 吸頂選單外層預設相對定位 */
+.NavArea {
+    width: 100%;
+    position: relative;
+    z-index: 100;
+}
+
+/* 當頁面往下捲，觸發吸頂的狀態 */
+.NavArea.cate-fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+/* * 你的按鈕高亮樣式
+ * 假設你用 img，可以在高亮時改變透明度、加邊框，或換圖
+ */
+.nav-btn {
+    display: inline-block;
+    cursor: pointer;
+    opacity: 0.6; /* 預設半透明 */
+    transition: opacity 0.3s;
+}
+
+/* 高亮狀態 (滑到該區塊時，或點擊時) */
+.nav-btn.cate-hover {
+    opacity: 1; /* 高亮時全亮 */
+}

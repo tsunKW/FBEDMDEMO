@@ -1,0 +1,102 @@
+🚀 快速启动上传指南
+===================
+
+为了上传文件，请按以下步骤操作：
+
+1️⃣ 获取 GitHub Token
+   访问: https://github.com/settings/tokens
+   - 点击 "Generate new token"
+   - 选择 "Generate new token (classic)"
+   - 勾选权限: repo 和 workflow
+   - 复制生成的 Token (只显示一次！)
+
+2️⃣ 打开命令行窗口
+   按 Win+R，输入 cmd 并回车
+
+3️⃣ 进入项目目录
+   输入命令:
+   cd /d e:\lab\台塑生醫旗艦館\FBEDM
+   然后按 Enter
+
+4️⃣ 执行上传脚本（选择一个方法）
+
+   方法 A - 使用批处理文件（最简单）:
+   ----
+   upload.bat your_token_here
+   
+   例如:
+   upload.bat ghp_1234567890abcdefghijklmnopqrstuvwxyz
+
+   方法 B - 直接使用 Python:
+   ----
+   python upload_files_with_token.py your_token_here
+
+   方法 C - 设置环境变量后运行:
+   ----
+   set GITHUB_TOKEN=your_token_here
+   python upload_to_github.py
+
+5️⃣ 等待上传完成
+
+   您将看到类似的输出:
+   
+   ================================================================================
+   GitHub 图片和资源文件上传工具
+   ================================================================================
+   
+   📍 源目录: e:\lab\台塑生醫旗艦館\FBEDM\images
+   📍 GitHub 仓库: tsunKW/FBEDMDEMO
+   📍 目标目录: images/
+   
+   📦 找到 88 个文件
+   
+   [1/88] ✓ 上传: image1.jpg (256.5 KB)
+   [2/88] ✓ 上传: image2.png (512.3 KB)
+   ...
+   
+   ================================================================================
+   上传完成！
+   ================================================================================
+   ✅ 成功: 88 个文件
+   📊 总计: 88 个文件
+   
+   🔗 仓库链接:
+      https://github.com/tsunKW/FBEDMDEMO
+   
+   📂 查看上传的文件:
+      https://github.com/tsunKW/FBEDMDEMO/tree/main/images
+
+6️⃣ 验证上传结果
+   
+   访问: https://github.com/tsunKW/FBEDMDEMO/tree/main/images
+   
+   查看所有上传的文件
+
+📝 注意事项：
+============
+
+1. 确保已安装 Python 3：
+   python --version
+   
+   如果没有，请从 https://www.python.org/ 安装
+
+2. 确保已安装 requests 库：
+   pip install requests
+
+3. Token 应该以 "ghp_" 开头
+
+4. 不要在任何地方分享或提交 Token
+
+5. 如果遇到问题，查看 README_UPLOAD.md 了解详情
+
+⏱️ 预计时间: 5-10 分钟（取决于网络速度）
+
+📊 上传信息:
+===========
+- 源目录: e:\lab\台塑生醫旗艦館\FBEDM\images\
+- 目标仓库: https://github.com/tsunKW/FBEDMDEMO
+- 目标目录: images/
+- 文件数量: 约 88 个
+- 文件类型: .jpg, .png, .js, .css
+
+祝您上传顺利！🎉

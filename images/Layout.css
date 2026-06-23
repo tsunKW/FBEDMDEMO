@@ -1,0 +1,91 @@
+/* 此文件為momo設計使用 勿更動 */
+
+.Area {
+    position: relative;
+    margin: 0 auto;
+    padding: 0;
+    border-radius: 0;
+    text-align: center;
+}
+
+.Area2000 {
+    max-width: 2000px;
+    height: auto;
+    margin-bottom: 0px;
+    position: relative;
+    margin: 0 auto;
+    box-sizing: border-box;
+    padding: 0;
+}
+
+.Area1220 {
+    max-width: 1220px;
+    height: auto;
+    margin-bottom: 0px;
+    position: relative;
+    margin: 0 auto;
+    box-sizing: border-box;
+    padding: 0;
+}
+
+@media screen and (max-width:768px) {
+    .Area2000 {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+    }
+
+    .Area1220 {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+    }
+    .swiper-wrapper {
+        height: auto;
+    }
+}
+
+.momoStyle_WRAPPER {
+    z-index: 0;
+    position: relative;
+    display: block;
+    margin: 0 auto;
+    padding: 0;
+    overflow: hidden;
+    width: 100%;
+    min-width: 1220px;
+    text-align: left;
+    font-family: "微軟正黑體", "Microsoft JhengHei", Helvetica;
+}
+
+@media screen and (max-width: 767px) {
+    .momoStyle_WRAPPER {
+        min-width: inherit;
+        min-height: 100vh;
+        overflow: hidden;
+    }
+}
+
+.momoStyle_WRAPPER .momoStyle_mainArea {
+    position: relative;
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    z-index: 1;
+}
+
+.momoStyle_mainArea {
+    padding: 0;
+    margin: 0;
+    font-family: '微軟正黑體', "Microsoft JhengHei", sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    word-wrap: break-word;
+    word-break: normal;
+}
+
+.momoStyle_mainArea img {
+    -webkit-user-drag: none;
+    border: none;
+    width: 100%;
+}

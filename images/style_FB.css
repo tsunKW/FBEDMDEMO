@@ -1,0 +1,323 @@
+/* ============================================
+   全域基礎樣式
+   ============================================ */
+
+body {
+    margin: 0;
+    padding: 0;
+    background: #ea6157;
+    background-image: url(FBBG.jpg);
+    width: 100%;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+@media screen and (max-width:768px) {
+    body {
+        background-image: url(FBBGm.jpg);
+        background-size: cover;
+        background-repeat: repeat-y;
+        background-attachment: fixed;
+    }
+}
+
+html {
+    color: #fff;
+    text-align: center;
+    scroll-behavior: auto;
+}
+
+@media screen and (min-width:768px) {
+    /* PCscrollbar樣式 */
+    ::-webkit-scrollbar-thumb {
+        background: #ffffff63;
+    }
+
+    ::-webkit-scrollbar {
+        -webkit-appearance: none;
+        width: 10px;
+        height: 5px;
+        background: linear-gradient(rgb(0, 0, 0) 0%, rgb(0, 0, 0) 100%);
+    }
+}
+
+/* ============================================
+   Bootstrap Grid 基礎調整
+   ============================================ */
+
+.row {
+    /*fixed flexbox stretch images*/
+    align-items: center !important;
+}
+
+.col-6 a:hover {
+    cursor: pointer;
+}
+
+.lip {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+/* ============================================
+   導航條樣式 (Area_FBnavbar + FBnavbar)
+   ============================================ */
+
+.Area_FBnavbar {
+    color: #ffffff;
+    margin-bottom: 0 !important;
+    background-color: #434343;
+}
+
+.FBnavbar a {
+    color: #ffffff;
+    font-family: futurastdmedium, noto sans tc, Arial, 微軟正黑體, microsoft jhenghei, sans-serif;
+    font-weight: 400;
+    font-size: 1.08rem;
+    line-height: 2em;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    transition-duration: .5s;
+}
+
+/* 選單hover動態 */
+.FBnavbar a:hover {
+    background-color: #595a6e;
+    color: #ffffff;
+    opacity: 1;
+    transition-duration: .5s;
+}
+
+.FBnavbar .dropdown-item:first-child {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+.FBnavbar .dropdown>a{
+    color: #fff !important;
+}
+
+.FBnavbar .dropdown-menu {
+    min-width: 13rem;
+    padding: 0;
+    margin: 0;
+    font-size: 1rem;
+    color: #212529;
+    text-align: left;
+    list-style: none;
+    background-color: #00000000;
+    background-clip: padding-box;
+    border: none;
+    border-radius: 0;
+}
+
+.FBnavbar .dropdown-menu .dropdown-item {
+    background-color: #ffffffdd;
+    border: none;
+    border-radius: 0;
+    padding: 3px;
+    color: #000;
+}
+
+.FBnavbar .dropdown-menu .dropdown-item:hover {
+    border: none;
+    border-radius: 0;
+    color: #0044cc;
+}
+
+.FBnavbar .dropdown {
+    overflow: hidden;
+}
+
+.FBnavbar .dropdown .dropdown-menu {
+    -webkit-transition: all .6s;
+    transition: all .6s;
+    max-height: 0;
+    display: block;
+    overflow: hidden;
+    opacity: 0;
+}
+
+/* --- PC 版 (寬度 768px 以上)：維持 Hover 展開 --- */
+@media screen and (min-width: 768px) {
+    .FBnavbar .dropdown:hover {
+        overflow: visible;
+    }
+
+    .FBnavbar .dropdown:hover .dropdown-menu {
+        max-height: 500px;
+        opacity: 1;
+    }
+}
+
+/* --- MB 版 (寬度 767px 以下)：改用點擊展開 (Bootstrap 點擊會觸發 .show) --- */
+@media screen and (max-width: 767px) {
+    .FBnavbar .show {
+        overflow: visible;
+    }
+
+    .FBnavbar .show .dropdown-menu {
+        max-height: 500px;
+        opacity: 1;
+    }
+
+    /* 1. 取消父層的相對定位，讓子選單以整條 Navbar 為對齊基準 */
+    .FBnavbar .dropdown {
+        position: static !important;
+    }
+
+    /* 2. 讓下拉選單 100% 滿版，貼齊左右邊緣 */
+    .FBnavbar .dropdown-menu {
+        width: 100%;
+        left: 0 !important;
+        right: 0 !important;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .Area_FBnavbar {
+        margin-bottom: 0 !important;
+    }
+
+    .FBnavbar li {
+        border: none;
+    }
+
+    .FBnavbar li:nth-child(odd) {
+        border: none;
+    }
+}
+
+/* ============================================
+   Swiper 輪播樣式
+   ============================================ */
+
+/* Swiper 基礎樣式 */
+.FstSwiper,
+.SecSwiper {
+    --swiper-theme-color: #434343;
+    --swiper-navigation-color: #fff;
+    --swiper-navigation-size: 30px;
+}
+
+.SecSwiper,
+.SecSwiper .swiper-wrapper {
+    overflow: visible !important;
+}
+
+.swiper-pagination {
+    width: 100%;
+    left: 0%;
+    bottom: 8%;
+}
+
+@media screen and (max-width: 768px) {
+    .swiper-pagination {
+        bottom: 2%;
+    }
+}
+
+/* 影片區域自訂樣式 (VDrow) */
+@media screen and (max-width: 768px) {
+    .VDrow {
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        overflow-y: hidden;
+        -webkit-overflow-scrolling: touch;
+        touch-action: pan-x;
+        scroll-snap-type: x mandatory;
+    }
+
+    .VDrow .col-4 {
+        flex: 0 0 60%;
+        max-width: 60%;
+        scroll-snap-align: start;
+        pointer-events: auto;
+    }
+}
+
+/* ============================================
+   分類標題樣式 (FBcategorytitle)
+   ============================================ */
+
+.FBcategorytitle {
+    cursor: default;
+}
+
+.FBcategorytitle span {
+    font-size: 36px;
+}
+
+/* ============================================
+   互動動畫樣式
+   ============================================ */
+
+/* 滿額贈的 translate 動畫 (FBtransformPosition) */
+.FBtransformPosition {
+    transform: translate(0, 0);
+    transition-duration: .3s;
+}
+
+.FBtransformPosition:hover {
+    transform: translate(0, -8px);
+}
+
+/* 產品卡片縮放動畫 (FBtransformScale) */
+.FBtransformScale {
+    transform: scale(1);
+    transition-duration: .3s;
+}
+
+.FBtransformScale:hover {
+    transform: scale(0.98);
+    cursor: pointer;
+}
+
+/* Mobile 版本禁用 hover 動畫 */
+@media screen and (max-width: 768px) {
+    .FBtransformScale:hover,
+    .FBtransformPosition:hover,
+    .FBpromoteSetLight:hover {
+        -webkit-filter: none;
+        filter: none;
+        transform: none;
+    }
+}
+
+/* ============================================
+   文字樣式
+   ============================================ */
+
+.FBsafeText {
+    color: #000;
+    text-align: center;
+    font-size: 0.8rem;
+    font-family: futurastdmedium, noto sans tc, Arial, 微軟正黑體, microsoft jhenghei, sans-serif;
+}
+
+/* ============================================
+   功能性樣式
+   ============================================ */
+
+/* 回到頂部按鈕 */
+#FBScrolltoTopBtn {
+    width: 60px;
+    position: fixed;
+    right: 1%;
+    bottom: 3%;
+    height: auto;
+    opacity: 0;
+    transition-duration: .3s;
+    z-index: 99;
+}
+
+#FBScrolltoTopBtn:hover {
+    cursor: pointer;
+    opacity: 1;
+}
