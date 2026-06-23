@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <script>
+    fetch('main.html')
+      .then(res => res.text())
+      .then(html => {
+        document.open();
+        document.write(html);
+        document.close();
+      });
+  </script>
+</head>
+<body></body>
+</html>
