@@ -307,17 +307,23 @@ html {
 
 /* 回到頂部按鈕 */
 #FBScrolltoTopBtn {
-    width: 60px;
+    width: 85px;
     position: fixed;
     right: 1%;
-    bottom: 3%;
+    bottom: 2%;
     height: auto;
     opacity: 0;
     transition-duration: .3s;
     z-index: 99;
 }
 
-#FBScrolltoTopBtn:hover {
+/* 滾動後出現 */
+#FBScrolltoTopBtn.is-visible {
+    opacity: .6;
+}
+
+/* hover 時完全不透明 */
+#FBScrolltoTopBtn.is-visible:hover {
     cursor: pointer;
     opacity: 1;
 }
